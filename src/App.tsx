@@ -507,14 +507,14 @@ export default function App() {
                   {[
                     { name: 'Graduation & PG', dur: '3 Years' },
                     { name: 'Technical Courses', dur: '2 Years' },
-                    { name: 'Nursing & Medical', dur: '2-3 Years' },
+                    { name: 'Nursing & Medical', dur: '2-4 Years' },
                     { name: 'Computer Science', dur: '1 Year' },
-                    { name: 'Professional Ed.', dur: '1 Year' },
+                    { name: 'Professional Ed.', dur: '1-2-3 Years' },
                     { name: 'Vocational Training', dur: '6 Months' }
                   ].map((prog) => (
                     <div key={prog.name} className="bg-white/5 rounded-xl p-3 border border-white/5">
                       <h4 className="text-[#c1ecd4] font-bold text-xs uppercase tracking-tight">{prog.name}</h4>
-                      <p className="text-[10px] text-slate-400 font-medium mt-0.5">Duration: {prog.dur}</p>
+                      {/* <p className="text-[10px] text-slate-400 font-medium mt-0.5">Duration {prog.dur}</p> */}
                     </div>
                   ))}
                 </div>
@@ -738,26 +738,31 @@ export default function App() {
             </div>
 
             {/* Static site roadmap marker */}
-            <div className="w-full h-48 rounded-2xl overflow-hidden relative border border-slate-200/50 shadow-sm bg-slate-300">
-              <img
-                referrerPolicy="no-referrer"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgRmNIWC_G7tpS4zFdAzfdCxPTt5E52BlSxa9MBFfryGsQ74LcL2dpmwMwzP942kGoAYjZTX6rGolklbEnJWARdXFw_uDC6m3SYeQRgO0CWFK4TPwSLsJ3a6YOQdPQf1XT3VxRvWDgYyZPKfIj5XJTO5JD4qnE16PlnhymjXJGnSwOe7oMjp8fnifzzD_A4MCLq0wWwlfa4eqYZkZ14SLn2c7IUPZa6rq8rerQ16CWx81cAXF8IGpckE9zhMsbokbRLsg4VfjRKPw"
-                alt="Static Location Map center"
-                className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
-              />
-              <div className="absolute inset-0 bg-black/5 flex items-center justify-center">
-                <a
-                  href="https://maps.google.com/?q=Ramashish+Chowk,+Hajipur,+Vaishali,+Bihar"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 bg-white text-[#012d1d] hover:bg-[#c1ecd4] rounded-xl font-bold shadow-sm text-[10px] sm:text-xs transition-transform active:scale-95 flex items-center gap-1 cursor-pointer"
-                >
-                  <MapPin className="w-4 h-4 text-emerald-800" /> Get Directions
-                </a>
-              </div>
-            </div>
+            <div className="w-full h-48 rounded-2xl overflow-hidden relative border border-slate-200/50 shadow-sm">
+  <iframe
+    title="Gramin Vikas Samiti Bihar Location"
+    src="https://maps.google.com/maps?q=25.691278,85.2098318&z=17&output=embed"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    className="w-full h-full"
+  ></iframe>
 
-          </div>
+  <div className="absolute bottom-3 right-3">
+    <a
+      href="https://www.google.com/maps?q=25.691278,85.2098318"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-4 py-2 bg-white text-[#012d1d] hover:bg-[#c1ecd4] rounded-xl font-bold shadow-md text-[10px] sm:text-xs transition-transform active:scale-95 flex items-center gap-1"
+    >
+      <MapPin className="w-4 h-4 text-emerald-800" />
+      Get Directions
+    </a>
+  </div>
+</div>
 
           {/* General Enquiry Form */}
           <div className="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-sm">
@@ -942,12 +947,12 @@ export default function App() {
         </div>
       </footer>
 
-      {/* Floating Admissions Notification widget */}
+      /* {/* Floating Admissions Notification widget */}
       <AdmissionsWidget
         isVisible={isAdmissionsVisible}
         onDismiss={() => setIsAdmissionsVisible(false)}
         onApplyClick={() => { setIsEnquiryOpen(true); }}
-      />
+      /> */
 
       {/* WhatsApp Floating Sticky Access Button */}
       <a
