@@ -1,0 +1,6 @@
+{
+  "name": "Nari Bal Kalyan Sansthan",
+  "description": "An interactive, visually spectacular community portal for the Nari Bal Kalyan Sansthan NGO and MAA Solution Hub, showcasing rural community development, healthcare, child welfare, educational courses, notices, dynamic donation flows, and enquiry systems.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
