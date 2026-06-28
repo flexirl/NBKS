@@ -422,57 +422,56 @@ export default function App() {
           <div className="grid col-span-1 lg:grid-cols-2 gap-8 items-stretch">
             
             {/* Leadership Cards - Chairperson & Secretary */}
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div className="w-full max-w-4xl mx-auto">
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
-  {/* Juhi Kumari - Chairperson */}
-  <div className="flex flex-col bg-white rounded-2xl border border-slate-200/60 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
-    <div className="relative w-full aspect-[4/3]">
-      <img
-        src="/images/chairperson.png"
-        alt="Juhi Kumari — Chairperson"
-        className="w-full h-full object-cover object-top"
-      />
-      {/* Gradient overlay so name is legible */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
-      {/* Role badge */}
-      <span className="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-[10px] font-medium uppercase tracking-widest bg-emerald-500/20 text-emerald-900 border border-emerald-400/40">
-        Chairperson's message
-      </span>
-      {/* Name on photo */}
-      <div className="absolute bottom-0 left-0 right-0 px-5 pb-3 pt-0">
-        <h4 className="text-white text-[17px] font-semibold tracking-wide m-0">Juhi Kumari</h4>
+    {/* Juhi Kumari - Chairperson */}
+    <div className="flex flex-col bg-white rounded-2xl border border-slate-200/60 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+      <div className="relative w-full" style={{ aspectRatio: '3/4' }}>
+        <img
+          src="/images/chairperson.png"
+          alt="Juhi Kumari — Chairperson"
+          className="w-full h-full object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        <span className="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-widest bg-[#012d1d]/75 text-[#c1ecd4] border border-[#c1ecd4]/30">
+          Chairperson's message
+        </span>
+        <div className="absolute bottom-0 left-0 right-0 px-4 pb-3">
+          <h4 className="text-white text-base font-semibold m-0">Juhi Kumari</h4>
+        </div>
+      </div>
+      <div className="px-5 py-4 flex-1">
+        <p className="text-sm text-slate-500 italic leading-relaxed font-serif border-l-2 border-emerald-200 pl-4 m-0">
+          "The true measure of any society is how it treats its most vulnerable members. Our thirty-year NGO journey is purely about bringing light, legal protection, and independent credit to the darkest village corners."
+        </p>
       </div>
     </div>
-    <div className="px-5 py-5">
-      <p className="text-sm text-slate-500 italic leading-relaxed font-serif border-l-2 border-slate-200 pl-4 m-0">
-        "The true measure of any society is how it treats its most vulnerable members. Our thirty-year NGO journey is purely about bringing light, legal protection, and independent credit to the darkest village corners."
-      </p>
-    </div>
-  </div>
 
-  {/* Raj Vardhan - Secretary */}
-  <div className="flex flex-col bg-white rounded-2xl border border-slate-200/60 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
-    <div className="relative w-full aspect-[4/3]">
-      <img
-        src="/images/secretary.jpg"
-        alt="Raj Vardhan — Secretary"
-        className="w-full h-full object-cover object-top"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
-      <span className="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-[10px] font-medium uppercase tracking-widest bg-amber-500/20 text-amber-900 border border-amber-400/40">
-        Secretary's message
-      </span>
-      <div className="absolute bottom-0 left-0 right-0 px-5 pb-3 pt-0">
-        <h4 className="text-white text-[17px] font-semibold tracking-wide m-0">Raj Vardhan</h4>
+    {/* Raj Vardhan - Secretary */}
+    <div className="flex flex-col bg-white rounded-2xl border border-slate-200/60 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+      <div className="relative w-full" style={{ aspectRatio: '3/4' }}>
+        <img
+          src="/images/secretary.jpg"
+          alt="Raj Vardhan — Secretary"
+          className="w-full h-full object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        <span className="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-widest bg-amber-900/75 text-amber-200 border border-amber-300/30">
+          Secretary's message
+        </span>
+        <div className="absolute bottom-0 left-0 right-0 px-4 pb-3">
+          <h4 className="text-white text-base font-semibold m-0">Raj Vardhan</h4>
+        </div>
+      </div>
+      <div className="px-5 py-4 flex-1">
+        <p className="text-sm text-slate-500 italic leading-relaxed font-serif border-l-2 border-amber-200 pl-4 m-0">
+          "Education and technological skill empowerment are the two pillars upon which we build the future of our nation. Under MAA Solution Hub, every child of farmers we teach constitutes a glorious national success story."
+        </p>
       </div>
     </div>
-    <div className="px-5 py-5">
-      <p className="text-sm text-slate-500 italic leading-relaxed font-serif border-l-2 border-slate-200 pl-4 m-0">
-        "Education and technological skill empowerment are the two pillars upon which we build the future of our nation. Under MAA Solution Hub, every child of farmers we teach constitutes a glorious national success story."
-      </p>
-    </div>
-  </div>
 
+  </div>
 </div>
 
           </div>
