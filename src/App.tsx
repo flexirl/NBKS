@@ -419,7 +419,7 @@ export default function App() {
             Voices of Leadership
           </h2>
 
-          <div className="grid col-span-1 lg:grid-cols-2 gap-8 items-stretch">
+          <div className="flex justify-center">
             
             {/* Leadership Cards - Chairperson & Secretary */}
 <div className="w-full max-w-4xl mx-auto">
