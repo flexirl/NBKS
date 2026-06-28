@@ -536,46 +536,57 @@ export default function App() {
           </div>
 
           {/* Maa Solution Hub Team — Director & Admin */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            
-            {/* Director — S.K. Singh (unchanged) */}
-            <div className="flex flex-col items-center gap-4 bg-white/5 border border-white/10 rounded-3xl p-6 text-center">
-              <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shrink-0 border-2 border-amber-400/30 shadow-lg ring-2 ring-amber-300/20 ring-offset-2 ring-offset-[#012d1d]">
-                <img
-                  src="/images/director-sk-singh.png"
-                  alt="S.K. Singh — Director, Maa Solution Hub"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="min-w-0">
-                <span className="text-[9px] text-amber-300 font-black uppercase tracking-widest block font-mono mb-1">Director — Maa Solution Hub</span>
-                <h4 className="font-extrabold text-base sm:text-lg text-[#c1ecd4] uppercase tracking-tight">S.K. Singh</h4>
-                <p className="text-[11px] sm:text-xs text-slate-400 italic leading-relaxed mt-1.5">
-                  "Empowerment of a nation begins in its villages — educate one woman, uplift an entire family."
-                </p>
-              </div>
-            </div>
+<div className="w-full max-w-4xl mx-auto">
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
-            {/* Admin — A. Vardhan */}
-            <div className="flex flex-col items-center gap-4 bg-white/5 border border-white/10 rounded-3xl p-6 text-center">
-              <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shrink-0 border-2 border-amber-400/30 shadow-lg ring-2 ring-amber-300/20 ring-offset-2 ring-offset-[#012d1d]">
-                <img
-                  src="/images/admin-a-vardhan.png"
-                  alt="A. Vardhan — Admin, Maa Solution Hub"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="min-w-0">
-                <span className="text-[9px] text-amber-300 font-black uppercase tracking-widest block font-mono mb-1">Admin — Maa Solution Hub</span>
-                <h4 className="font-extrabold text-base sm:text-lg text-[#c1ecd4] uppercase tracking-tight">A. Vardhan</h4>
-                <p className="text-[11px] sm:text-xs text-slate-400 italic leading-relaxed mt-1.5">
-                  "Committed to streamlining operations and ensuring every student receives the guidance they deserve."
-                </p>
-              </div>
-            </div>
+    {/* Director — S.K. Singh */}
+    <div className="flex flex-col bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-amber-400/30 transition-all duration-300">
+      <div className="relative w-full" style={{ aspectRatio: '3/4' }}>
+        <img
+          src="/images/director-sk-singh.png"
+          alt="S.K. Singh — Director, Maa Solution Hub"
+          className="w-full h-full object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+        <span className="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-widest bg-amber-900/75 text-amber-200 border border-amber-300/30">
+          Director — Maa Solution Hub
+        </span>
+        <div className="absolute bottom-0 left-0 right-0 px-4 pb-3">
+          <h4 className="text-white text-base font-semibold m-0">S.K. Singh</h4>
+        </div>
+      </div>
+      <div className="px-5 py-4 flex-1">
+        <p className="text-sm text-slate-400 italic leading-relaxed font-serif border-l-2 border-amber-400/30 pl-4 m-0">
+          "Empowerment of a nation begins in its villages — educate one woman, uplift an entire family."
+        </p>
+      </div>
+    </div>
 
-          </div>
+    {/* Admin — A. Vardhan */}
+    <div className="flex flex-col bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-amber-400/30 transition-all duration-300">
+      <div className="relative w-full" style={{ aspectRatio: '3/4' }}>
+        <img
+          src="/images/admin-a-vardhan.png"
+          alt="A. Vardhan — Admin, Maa Solution Hub"
+          className="w-full h-full object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+        <span className="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-widest bg-[#012d1d]/80 text-[#c1ecd4] border border-[#c1ecd4]/30">
+          Admin — Maa Solution Hub
+        </span>
+        <div className="absolute bottom-0 left-0 right-0 px-4 pb-3">
+          <h4 className="text-white text-base font-semibold m-0">A. Vardhan</h4>
+        </div>
+      </div>
+      <div className="px-5 py-4 flex-1">
+        <p className="text-sm text-slate-400 italic leading-relaxed font-serif border-l-2 border-emerald-500/40 pl-4 m-0">
+          "Committed to streamlining operations and ensuring every student receives the guidance they deserve."
+        </p>
+      </div>
+    </div>
 
+  </div>
+</div>
           {/* SINGLE BLINKING NOTICE BOX (Synced directly with Google Sheets) */}
           <div className="max-w-4xl mx-auto pt-6 border-t border-emerald-800">
             <div className="bg-[#5c0b11]/80 border-2 border-red-500/40 rounded-3xl p-5 shadow-inner">
