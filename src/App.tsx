@@ -424,45 +424,59 @@ export default function App() {
 
           <div className="grid col-span-1 lg:grid-cols-2 gap-8 items-stretch">
             
-            {/* Juhi Kumari - Chairperson's Message */}
-            <div className="flex flex-col sm:flex-row gap-6 p-6 bg-white rounded-2xl border border-slate-200/50 shadow-sm items-center sm:items-start text-center sm:text-left transition-all duration-300 hover:shadow-md">
-              <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden shrink-0 border-2 border-slate-100 shadow-inner">
-                <img
-                  src="/images/chairperson.png"
-                  alt="Juhi Kumari — Chairperson"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="space-y-2.5">
-                <span className="px-3 py-1 bg-emerald-50 text-emerald-800 font-extrabold text-[9px] uppercase tracking-wider rounded-full block w-fit mx-auto sm:mx-0">
-                  Chairperson's Message
-                </span>
-                <h4 className="font-extrabold text-base text-slate-800 uppercase tracking-tight">Juhi Kumari</h4>
-                <p className="text-xs text-slate-500 italic leading-relaxed font-mono">
-                  "The true measure of any society is how it treats its most vulnerable members. Our thirty-year NGO journey is purely about bringing light, legal protection, and independent credit to the darkest village corners."
-                </p>
-              </div>
-            </div>
+            {/* Leadership Cards - Chairperson & Secretary */}
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
-            {/* Raj Vardhan - Secretary's Message */}
-            <div className="flex flex-col sm:flex-row gap-6 p-6 bg-white rounded-2xl border border-slate-200/50 shadow-sm items-center sm:items-start text-center sm:text-left transition-all duration-300 hover:shadow-md">
-              <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden shrink-0 border-2 border-slate-100 shadow-inner">
-                <img
-                  src="/images/secretary.jpg"
-                  alt="Raj Vardhan — Secretary"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="space-y-2.5">
-                <span className="px-3 py-1 bg-amber-50 text-amber-800 font-extrabold text-[9px] uppercase tracking-wider rounded-full block w-fit mx-auto sm:mx-0">
-                  Secretary's Message
-                </span>
-                <h4 className="font-extrabold text-base text-slate-800 uppercase tracking-tight">Raj Vardhan</h4>
-                <p className="text-xs text-slate-500 italic leading-relaxed font-mono">
-                  "Education and technological skill empowerment are the two pillars upon which we build the future of our nation. Under MAA Solution Hub, every child of farmers we teach constitutes a glorious national success story."
-                </p>
-              </div>
-            </div>
+  {/* Juhi Kumari - Chairperson */}
+  <div className="flex flex-col bg-white rounded-2xl border border-slate-200/60 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+    <div className="relative w-full aspect-[4/3]">
+      <img
+        src="/images/chairperson.png"
+        alt="Juhi Kumari — Chairperson"
+        className="w-full h-full object-cover object-top"
+      />
+      {/* Gradient overlay so name is legible */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+      {/* Role badge */}
+      <span className="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-[10px] font-medium uppercase tracking-widest bg-emerald-500/20 text-emerald-900 border border-emerald-400/40">
+        Chairperson's message
+      </span>
+      {/* Name on photo */}
+      <div className="absolute bottom-0 left-0 right-0 px-5 pb-3 pt-0">
+        <h4 className="text-white text-[17px] font-semibold tracking-wide m-0">Juhi Kumari</h4>
+      </div>
+    </div>
+    <div className="px-5 py-5">
+      <p className="text-sm text-slate-500 italic leading-relaxed font-serif border-l-2 border-slate-200 pl-4 m-0">
+        "The true measure of any society is how it treats its most vulnerable members. Our thirty-year NGO journey is purely about bringing light, legal protection, and independent credit to the darkest village corners."
+      </p>
+    </div>
+  </div>
+
+  {/* Raj Vardhan - Secretary */}
+  <div className="flex flex-col bg-white rounded-2xl border border-slate-200/60 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+    <div className="relative w-full aspect-[4/3]">
+      <img
+        src="/images/secretary.jpg"
+        alt="Raj Vardhan — Secretary"
+        className="w-full h-full object-cover object-top"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+      <span className="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-[10px] font-medium uppercase tracking-widest bg-amber-500/20 text-amber-900 border border-amber-400/40">
+        Secretary's message
+      </span>
+      <div className="absolute bottom-0 left-0 right-0 px-5 pb-3 pt-0">
+        <h4 className="text-white text-[17px] font-semibold tracking-wide m-0">Raj Vardhan</h4>
+      </div>
+    </div>
+    <div className="px-5 py-5">
+      <p className="text-sm text-slate-500 italic leading-relaxed font-serif border-l-2 border-slate-200 pl-4 m-0">
+        "Education and technological skill empowerment are the two pillars upon which we build the future of our nation. Under MAA Solution Hub, every child of farmers we teach constitutes a glorious national success story."
+      </p>
+    </div>
+  </div>
+
+</div>
 
           </div>
         </div>
@@ -505,16 +519,15 @@ export default function App() {
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                   {[
-                    { name: 'Graduation & PG', dur: '3 Years' },
-                    { name: 'Technical Courses', dur: '2 Years' },
-                    { name: 'Nursing & Medical', dur: '2-4 Years' },
-                    { name: 'Computer Science', dur: '1 Year' },
-                    { name: 'Professional Ed.', dur: '1-2-3 Years' },
-                    { name: 'Vocational Training', dur: '6 Months' }
+                    { name: 'Professional Courses', dur: 'MBA, MCA, BBA, BCA' },
+                    { name: 'Technical Courses', dur: 'B.Tech, Polytechnic, ITI' },
+                    { name: 'Nursing & Medical', dur: 'ANM/GNM, B.Sc.Nursing, D.Pharama, B.Pharma' },
+                    { name: 'Computer', dur: 'ADCA, PGDCA' },
+                    { name: 'Teacher Training', dur: 'B.ed, D.el.ed' },
                   ].map((prog) => (
                     <div key={prog.name} className="bg-white/5 rounded-xl p-3 border border-white/5">
                       <h4 className="text-[#c1ecd4] font-bold text-xs uppercase tracking-tight">{prog.name}</h4>
-                      {/* <p className="text-[10px] text-slate-400 font-medium mt-0.5">Duration {prog.dur}</p> */}
+                       <p className="text-[10px] text-slate-400 font-medium mt-0.5"> {prog.dur}</p> 
                     </div>
                   ))}
                 </div>
@@ -580,7 +593,7 @@ export default function App() {
 
                 <div className="space-y-1.5 flex-1 min-w-0">
                   <span className="text-[9px] text-[#ffb6b9] font-black uppercase tracking-widest block font-mono">
-                    🔴 Live Announcement (Auto-Updated via Google Sheet)
+                    🔴 Live Announcement
                   </span>
                   <p className="text-xs sm:text-sm font-bold text-red-100 uppercase tracking-wide leading-relaxed">
                     {blinkingNotice}
