@@ -15,8 +15,7 @@ import {
   HeartHandshake,
   MessageCircle,
   Clock,
-  Award,
-  Quote
+  Award
 } from 'lucide-react';
 
 import { Sector } from './types';
@@ -24,7 +23,6 @@ import { INITIAL_SECTORS, GALLERY_IMAGES } from './data';
 import Navigation from './components/Navigation';
 import DonationModal from './components/DonationModal';
 import EnquiryModal from './components/EnquiryModal';
-import AdmissionsWidget from './components/AdmissionsWidget';
 
 // Google Sheets Published CSV Endpoint URL
 // This fetches notice data directly from the published Google Sheet.
@@ -34,7 +32,6 @@ export default function App() {
   // Modals & overlay triggers
   const [isDonationOpen, setIsDonationOpen] = useState(false);
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
-  const [isAdmissionsVisible, setIsAdmissionsVisible] = useState(true);
   
   // Lightbox index for full-screen gallery view
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
@@ -776,6 +773,7 @@ export default function App() {
     </a>
   </div>
 </div>
+          </div>
 
           {/* General Enquiry Form */}
           <div className="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-sm">
@@ -960,12 +958,7 @@ export default function App() {
         </div>
       </footer>
 
-      /* {/* Floating Admissions Notification widget */}
-      <AdmissionsWidget
-        isVisible={isAdmissionsVisible}
-        onDismiss={() => setIsAdmissionsVisible(false)}
-        onApplyClick={() => { setIsEnquiryOpen(true); }}
-      /> */
+      
 
       {/* WhatsApp Floating Sticky Access Button */}
       <a
